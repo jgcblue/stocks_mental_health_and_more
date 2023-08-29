@@ -75,3 +75,36 @@ plot_decomposition_components(decomposition_results)
 print(decomposition_results['apple_closing_avg']['trend'])
 print(decomposition_results['msft_closing_avg']['seasonal'])
 
+
+
+
+# Perform Holt-Winters forecasting
+model = ExponentialSmoothing(ts_data, seasonal='add', seasonal_periods=7)
+fit_model = model.fit()
+
+def wrapExponentialSmoothing(args**):
+    '''
+    Overview: Wraps the ExponentialSmoothing function. You can provide whaever
+    you like from the arguments available to be set. 
+
+    Returns: Returns a model which you can use to forecast.
+    '''
+    model=ExponentialSmoothing(args**)
+    return model
+
+# Generate forecasts
+forecast_periods = 14  # Number of periods to forecast
+forecast = fit_model.forecast(forecast_periods)
+
+# Plot original data and forecasts
+plt.figure(figsize=(10, 6))
+plt.plot(ts_data, label='Original Data')
+plt.plot(fit_model.fittedvalues, label='Fitted Values')
+plt.plot(pd.date_range(start=index[-1], periods=forecast_periods+1, freq='D')[1:], forecast, label='Forecast')
+plt.legend()
+plt.title('Holt-Winters Forecasting')
+plt.xlabel('Date')
+plt.ylabel('Value')
+plt.show()
+
+

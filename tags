@@ -17,12 +17,16 @@ calculate_average_by_year_micro	data/data_imports.py	/^from data_utils import ca
 calculate_average_by_year_micro	data/data_utils.py	/^def calculate_average_by_year_micro(df, column_name):$/;"	f
 decomposition_results	quant_models/models.py	/^decomposition_results = perform_seasonal_decomposition(final, model=model_choice)$/;"	v
 final	data/data_imports.py	/^final = merged_3.copy()$/;"	v
+fit_model	quant_models/models.py	/^fit_model = model.fit()$/;"	v
+forecast	quant_models/models.py	/^forecast = fit_model.forecast(forecast_periods)$/;"	v
+forecast_periods	quant_models/models.py	/^forecast_periods = 14  # Number of periods to forecast$/;"	v
 matplotlib	quant_models/models.py	/^import matplotlib.pyplot as plt$/;"	i
 merge_and_drop_na	data/data_imports.py	/^from data_utils import calculate_and_set_average_by_year, calculate_average_by_year_micro, merge_and_drop_na, read_stock_data, rename_columns$/;"	i
 merge_and_drop_na	data/data_utils.py	/^def merge_and_drop_na(data_frames):$/;"	f
 merged_1	data/data_imports.py	/^merged_1 = merge_and_drop_na([average_apple, average_Microsoft])$/;"	v
 merged_2	data/data_imports.py	/^merged_2 = merge_and_drop_na([merged_1, average_Nvda])$/;"	v
 merged_3	data/data_imports.py	/^merged_3 = rename_columns(merged_2, ['apple_closing_avg', 'msft_closing_avg', 'nvda_closing_avg'])$/;"	v
+model	quant_models/models.py	/^model = ExponentialSmoothing(ts_data, seasonal='add', seasonal_periods=7)$/;"	v
 model_choice	quant_models/models.py	/^model_choice = input("Choose decomposition model ('additive' or 'multiplicative'): ").lower()$/;"	v
 pd	data/data_imports.py	/^import pandas as pd$/;"	i
 pd	data/data_utils.py	/^import pandas as pd$/;"	i
@@ -35,3 +39,4 @@ read_stock_data	data/data_utils.py	/^def read_stock_data(file_path):$/;"	f
 rename_columns	data/data_imports.py	/^from data_utils import calculate_and_set_average_by_year, calculate_average_by_year_micro, merge_and_drop_na, read_stock_data, rename_columns$/;"	i
 rename_columns	data/data_utils.py	/^def rename_columns(data_frame, column_names):$/;"	f
 seasonal_decompose	quant_models/models.py	/^from statsmodels.tsa.seasonal import seasonal_decompose$/;"	i
+wrapExponentialSmoothing	quant_models/models.py	/^def wrapExponentialSmoothing(args**):$/;"	f
