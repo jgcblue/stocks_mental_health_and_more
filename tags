@@ -1,0 +1,37 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+average_Microsoft	data/data_imports.py	/^average_Microsoft = calculate_and_set_average_by_year_micro(bigMicrosoft, 'date', 'close')$/;"	v
+average_Nvda	data/data_imports.py	/^average_Nvda = calculate_and_set_average_by_year(bigNvda, 'Date', 'Close')$/;"	v
+average_apple	data/data_imports.py	/^average_apple = calculate_and_set_average_by_year(bigApple, 'Date', 'Close')$/;"	v
+bigApple	data/data_imports.py	/^bigApple = read_stock_data('More_BigThree_data\/bapple.csv')$/;"	v
+bigMicrosoft	data/data_imports.py	/^bigMicrosoft = read_stock_data('More_BigThree_data\/bMicrosoft.csv')$/;"	v
+bigNvda	data/data_imports.py	/^bigNvda = read_stock_data('More_BigThree_data\/bNvda.csv')$/;"	v
+calculate_and_set_average_by_year	data/data_imports.py	/^from data_utils import calculate_and_set_average_by_year, calculate_average_by_year_micro, merge_and_drop_na, read_stock_data, rename_columns$/;"	i
+calculate_and_set_average_by_year	data/data_utils.py	/^def calculate_and_set_average_by_year(data_frame, date_column, price_column):$/;"	f
+calculate_average_by_year	data/data_utils.py	/^def calculate_average_by_year(df, column_name):$/;"	f
+calculate_average_by_year_micro	data/data_imports.py	/^from data_utils import calculate_and_set_average_by_year, calculate_average_by_year_micro, merge_and_drop_na, read_stock_data, rename_columns$/;"	i
+calculate_average_by_year_micro	data/data_utils.py	/^def calculate_average_by_year_micro(df, column_name):$/;"	f
+decomposition_results	quant_models/models.py	/^decomposition_results = perform_seasonal_decomposition(final, model=model_choice)$/;"	v
+final	data/data_imports.py	/^final = merged_3.copy()$/;"	v
+matplotlib	quant_models/models.py	/^import matplotlib.pyplot as plt$/;"	i
+merge_and_drop_na	data/data_imports.py	/^from data_utils import calculate_and_set_average_by_year, calculate_average_by_year_micro, merge_and_drop_na, read_stock_data, rename_columns$/;"	i
+merge_and_drop_na	data/data_utils.py	/^def merge_and_drop_na(data_frames):$/;"	f
+merged_1	data/data_imports.py	/^merged_1 = merge_and_drop_na([average_apple, average_Microsoft])$/;"	v
+merged_2	data/data_imports.py	/^merged_2 = merge_and_drop_na([merged_1, average_Nvda])$/;"	v
+merged_3	data/data_imports.py	/^merged_3 = rename_columns(merged_2, ['apple_closing_avg', 'msft_closing_avg', 'nvda_closing_avg'])$/;"	v
+model_choice	quant_models/models.py	/^model_choice = input("Choose decomposition model ('additive' or 'multiplicative'): ").lower()$/;"	v
+pd	data/data_imports.py	/^import pandas as pd$/;"	i
+pd	data/data_utils.py	/^import pandas as pd$/;"	i
+pd	quant_models/models.py	/^import pandas as pd$/;"	i
+perform_seasonal_decomposition	quant_models/models.py	/^def perform_seasonal_decomposition(data_frame, model='additive'):$/;"	f
+plot_decomposition_components	quant_models/models.py	/^def plot_decomposition_components(components_dict):$/;"	f
+plt	quant_models/models.py	/^import matplotlib.pyplot as plt$/;"	i
+read_stock_data	data/data_imports.py	/^from data_utils import calculate_and_set_average_by_year, calculate_average_by_year_micro, merge_and_drop_na, read_stock_data, rename_columns$/;"	i
+read_stock_data	data/data_utils.py	/^def read_stock_data(file_path):$/;"	f
+rename_columns	data/data_imports.py	/^from data_utils import calculate_and_set_average_by_year, calculate_average_by_year_micro, merge_and_drop_na, read_stock_data, rename_columns$/;"	i
+rename_columns	data/data_utils.py	/^def rename_columns(data_frame, column_names):$/;"	f
+seasonal_decompose	quant_models/models.py	/^from statsmodels.tsa.seasonal import seasonal_decompose$/;"	i
